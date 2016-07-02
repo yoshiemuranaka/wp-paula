@@ -1,11 +1,30 @@
-// @import "../layout/content-sidebar";
-// @import "../layout/sidebar-content";
 /*--------------------------------------------------------------
-## Posts and pages
+## Header & Footer
 --------------------------------------------------------------*/
-@import "primary/posts-and-pages";
 
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-@import "primary/comments";
+@import "primary/header";
+@import "primary/footer";
+@import "primary/main";
+
+
+.site {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.site-content {
+	flex: 1;
+}
+
+.content-wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 3%;
+	@include mq(medium) {
+		padding: 0 15px;
+	}
+	@include mq(large) {
+		padding: 0;
+	}
+}

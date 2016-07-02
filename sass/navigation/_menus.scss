@@ -1,8 +1,8 @@
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: inline-block;
+	float: right;
+	// width: 100%;
 
 	ul {
 		display: none;
@@ -52,6 +52,10 @@
 	li {
 		float: left;
 		position: relative;
+		padding-right: 15px;
+		&:last-child {
+			padding: 0;
+		}
 
 		&:hover > a,
 		&.focus > a {
@@ -61,6 +65,10 @@
 	a {
 		display: block;
 		text-decoration: none;
+		line-height: 80px;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		font-weight: 100;
 	}
 
 	.current_page_item > a,
@@ -76,32 +84,11 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@include mq(medium) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
 		display: block;
-	}
-}
-
-.comment-navigation,
-.posts-navigation,
-.post-navigation {
-
-	.site-main & {
-		margin: 0 0 1.5em;
-		overflow: hidden;
-	}
-
-	.nav-previous {
-		float: left;
-		width: 50%;
-	}
-
-	.nav-next {
-		float: right;
-		text-align: right;
-		width: 50%;
 	}
 }

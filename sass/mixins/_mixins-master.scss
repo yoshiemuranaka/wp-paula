@@ -22,3 +22,97 @@
 @mixin clearfix-after() {
 	clear: both;
 }
+
+/* Media Queries
+   ========================================================================== */
+
+@mixin mq($point) {
+  @if $point == medium {
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  }
+  @if $point == large {
+    @media only screen and (min-width: 1400px) {
+      @content;
+    }
+  }
+  @else if $point == small-only {
+    @media only screen and (max-width: 768px) {
+      @content
+    }
+  }
+}
+
+
+/* Grid
+   ========================================================================== */
+
+.row {
+  @include clearfix();
+
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.col {
+  display: inline;
+  float: left;
+  width: 100%;
+  margin-bottom: 2em;
+  @include mq(medium) {
+    margin-bottom: 4em;
+  }
+}
+
+@include mq(medium) {
+  .col.one {
+    width: 8.3333;
+  } 
+  .col.two {
+    width: 16.6667%
+  }
+  .col.three,
+  .col.one-quarter{
+    width: 25%
+  }
+  .col.four,
+  .col.one-third {
+    width: 33.3333%;
+  }
+  .col.five{
+    width: 41.6667%;
+  }
+  .col.six,
+  .col.half {
+    width: 50%;
+  } 
+  .col.seven {
+    width: 58.3333%
+  }
+  .col.eight,
+  .col.two-thirds{
+    width: 66.6667%
+  }
+  .col.nine,
+  .col.three-quarters {
+    width: 75%;
+  }
+  .col.ten{
+    width: 83.3333%;
+  }
+  .col.eleven {
+    width: 91.6667%;
+  }
+}
+
+@include mq(small-only) {
+  .col.sm-two-thirds{
+    width: 66.6666%;
+  }
+  .col.sm-one-third {
+    width: 33.3333%
+  }
+}

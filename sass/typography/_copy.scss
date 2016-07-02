@@ -1,5 +1,7 @@
 p {
 	margin-bottom: 1.5em;
+	font-weight: 100;
+	letter-spacing: 0.02em;
 }
 
 dfn, cite, em, i {
@@ -12,22 +14,6 @@ blockquote {
 
 address {
 	margin: 0 0 1.5em;
-}
-
-pre {
-	background: $color__background-pre;
-	font-family: $font__pre;
-	@include font-size(0.9375);
-	line-height: $font__line-height-pre;
-	margin-bottom: 1.6em;
-	max-width: 100%;
-	overflow: auto;
-	padding: 1.6em;
-}
-
-code, kbd, tt, var {
-	font-family: $font__code;
-	@include font-size(0.9375);
 }
 
 abbr, acronym {

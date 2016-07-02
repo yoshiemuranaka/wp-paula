@@ -6,7 +6,7 @@ var svgmin = require('gulp-svgmin');
 
 var paths = {
   scripts: 'js/*',
-  scss: 'sass/*',
+  scss: 'sass/**',
   images: 'images/*'
 };
 
