@@ -1,8 +1,31 @@
-.post.type-post {
+.writing__excerpt,
+.entry-content {
 	max-width: 750px;
-	margin: 0 auto;
+	margin: 0 auto 50px;
 	p {
 		font-size: 1.15em;
 		line-height: 2em
 	}
+}
+
+.entry-content.translated {
+	height: 0;
+	display: none;
+}
+
+.link--translate {
+	display: block;
+	margin: 50px;
+	text-align: center;
+}
+
+.collection__excerpt {
+	padding: 0;
+	@include mq(medium) {
+		padding-left: 30px;
+	}
+}
+
+.writing__excerpt {
+	text-align: center;
 }

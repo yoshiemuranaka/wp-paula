@@ -17,6 +17,12 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+<link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.gallery.min.css" type="text/css" rel="stylesheet" />
+
+<script src="//code.jquery.com/jquery-latest.js"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.gallery.min.js" type="text/javascript" charset="utf-8"></script>
+
 <?php wp_head(); ?>
 </head>
 
@@ -29,7 +35,6 @@
 			<div class="site-branding">
 				<h1><a href="<?php echo get_home_url(); ?>" class="logo">Paula Hutchings</a></h1>
 			</div><!-- .site-branding -->
-
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'paulahutchings' ); ?></button>
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>

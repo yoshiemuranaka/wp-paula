@@ -1,5 +1,6 @@
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
+	letter-spacing: 0.06em;
 }
 
 .entry-meta h3 {
@@ -10,4 +11,82 @@ h1, h2, h3, h4, h5, h6 {
 
 .entry-header h1 {
 	margin-bottom: 0;
+}
+
+.section-title,
+.entry-title {
+  text-align: center;
+}
+
+.section-title {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  a {
+    text-decoration: none;
+  }
+}
+
+.site-branding {
+	display: inline-block;
+}
+a.logo {
+	text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  position: relative;
+  height: 350px;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 0 10%;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  align-items: center;
+  justify-content: center;
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $true-white;
+
+    opacity: 0.8;
+    z-index: 0;
+  }
+  .entry-header {
+    position: relative;
+
+    font-size: 1.5em;
+    text-align: center;
+
+    z-index: 1;
+    h1 {
+      margin: 0;
+    }
+  }
+}
+
+.collection__title {
+  a {
+    text-decoration: none;
+  }
+}
+
+.writing__title {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  a {
+    text-decoration: none;
+  }
+}
+.writing__date {
+  margin: 0;
+  font-weight: 400;
 }

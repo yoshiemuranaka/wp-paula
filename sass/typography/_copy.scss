@@ -1,7 +1,7 @@
 p {
 	margin-bottom: 1.5em;
 	font-weight: 100;
-	letter-spacing: 0.02em;
+	letter-spacing: 0.06em;
 }
 
 dfn, cite, em, i {
@@ -28,4 +28,10 @@ mark, ins {
 
 big {
 	font-size: 125%;
+}
+
+.collection__excerpt p {
+	font-size: 1.2em;
+	margin-top: 0;
+	margin-bottom: 0.5em;
 }

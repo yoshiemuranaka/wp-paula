@@ -2,7 +2,6 @@
 ## Header & Footer
 --------------------------------------------------------------*/
 
-@import "primary/header";
 @import "primary/footer";
 @import "primary/main";
 
@@ -27,4 +26,9 @@
 	@include mq(large) {
 		padding: 0;
 	}
+}
+
+.posts__container {
+	max-width: 1000px;
+	margin: 50px auto;
 }
