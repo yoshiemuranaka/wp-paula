@@ -19,7 +19,7 @@ get_header(); ?>
 				<div class="row painting__gallery">
 					<?php foreach($paintings as $painting): ?>
 						<div class="col four">
-							<a href="#" data-featherlight="<?php echo $painting['url']?>" class="gallery">
+							<a href="<?php echo $painting['url']?>" rel="gallery-paintings" class="swipebox">
 								<div class="image--thumbnail" style="background-image:url(<?php echo $painting['url']?>)"></div>
 							</a>
 						</div>
@@ -39,7 +39,7 @@ get_header(); ?>
 				<div class="row painting__gallery">
 					<?php foreach($photographs as $photograph): ?>
 						<div class="col four">
-							<a href="#" data-featherlight="<?php echo $photograph['url']?>" class="gallery">
+							<a href="<?php echo $photograph['url']?>" rel="gallery-photographs" class="swipebox">
 								<div class="image--thumbnail" style="background-image:url(<?php echo $photograph['url']?>)"></div>
 							</a>
 						</div>

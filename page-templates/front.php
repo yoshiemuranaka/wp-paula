@@ -36,7 +36,7 @@ get_header(); ?>
 								<div class="col eight">	
 										<div class="collection__excerpt">
 										<?php $content = get_the_content();
-										 echo '<p>' .  wp_trim_words( $content, 100, '...' ) . '</p>'; 
+										 echo '<p>' .  wp_trim_words( $content, 80, '...' ) . '</p>'; 
 										?>
 										<a href="<?php the_permalink() ?>">See more</a>
 										</div>

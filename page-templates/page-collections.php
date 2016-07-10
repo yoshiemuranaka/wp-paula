@@ -17,7 +17,7 @@ get_header(); ?>
 				?>
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 						<div class="row post">
-							<h2 class="collection__title"><?php the_title(); ?></h2>
+							<h2 class="collection__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="col four">
 								<div class="collection__img">
 									<img src="<?php echo get_field('hero_image'); ?>">
@@ -26,7 +26,7 @@ get_header(); ?>
 							<div class="col eight">	
 										<div class="collection__excerpt">
 										<?php $content = get_the_content();
-										 echo '<p>' .  wp_trim_words( $content, 100, '...' ) . '</p>'; 
+										 echo '<p>' .  wp_trim_words( $content, 80, '...' ) . '</p>'; 
 										?>
 										<a href="<?php the_permalink() ?>">See more</a>
 										</div>

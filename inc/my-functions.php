@@ -95,12 +95,10 @@ function create_post_type() {
 
 function load_vendor_javascript() {
 
-  /* Featherlight */
-  wp_enqueue_style( 'featherlight', get_template_directory_uri() . '/js/vendor/featherlight/featherlight.css' );
-  wp_enqueue_style( 'featherlight-gallery', get_template_directory_uri() . '/js/vendor/featherlight/featherlight.gallery.min.css' );
 
-  wp_register_script('featherlight', get_stylesheet_directory_uri() . '/js/vendor/featherlight/featherlight.min.js', 'jquery', false);
-   wp_register_script('featherlightgallery', get_stylesheet_directory_uri() . '/js/vendor/featherlight/featherlight.gallery.min.js', 'jquery', false);
+   /* Swipebox */
+   wp_enqueue_style( 'swipebox', get_template_directory_uri() . '/js/vendor/swipebox/src/css/swipebox.css' );
+   wp_register_script('swipeboxjs', get_stylesheet_directory_uri() . '/js/vendor/swipebox/src/js/jquery.swipebox.min.js', 'jquery', false);
 
 
   /* custom javascript */
@@ -109,6 +107,8 @@ function load_vendor_javascript() {
   wp_enqueue_script('jquery');
   wp_enqueue_script('featherlight');
   wp_enqueue_script('featherlightgallery');
+  wp_enqueue_script('swipeboxjs');
+
   wp_enqueue_script('interactions');
 }
 add_action( 'wp_enqueue_scripts', 'load_vendor_javascript' );

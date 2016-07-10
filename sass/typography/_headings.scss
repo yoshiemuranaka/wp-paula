@@ -10,7 +10,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .entry-header h1 {
-	margin-bottom: 0;
+	margin-bottom: 25px;
+	margin-top: 50px;
 }
 
 .section-title,
@@ -30,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-branding {
 	display: inline-block;
+	h1 {
+		margin: 0;
+		line-height: 80px;
+	}
 }
 a.logo {
 	text-decoration: none;

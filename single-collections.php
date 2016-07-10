@@ -46,7 +46,7 @@ get_header(); ?>
 				<div class="row collection__gallery">
 					<?php foreach($gallery as $image): ?>
 						<div class="col four">
-							<a href="#" data-featherlight="<?php echo $image['url']?>" class="gallery">
+							<a rel="gallery" href="<?php echo $image['url']?>" class="swipebox">
 								<div class="image--thumbnail" style="background-image:url(<?php echo $image['url']?>)"></div>
 							</a>
 						</div>
