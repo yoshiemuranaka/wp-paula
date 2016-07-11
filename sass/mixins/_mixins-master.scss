@@ -43,6 +43,23 @@
   }
 }
 
+/* Animations
+   ========================================================================== */
+@keyframes displayNone {
+  0%{
+    display: block;
+    opacity: 1;
+  }
+  50% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
 /* Media Queries
    ========================================================================== */
 

@@ -16,22 +16,22 @@ get_header(); ?>
 					$loop = new WP_Query( $args ); 
 				?>
 					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-						<div class="row post">
-							<h2 class="collection__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							<div class="col four">
-								<div class="collection__img">
-									<img src="<?php echo get_field('hero_image'); ?>">
+						<div class="row">
+								<div class="col four">
+									<div class="collection__img">
+										<img class="image--thumbnail" src="<?php echo get_field('hero_image'); ?>">
+									</div>
 								</div>
-							</div>
-							<div class="col eight">	
+								<div class="col eight collection__content">	
+										<h2 class="collection__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 										<div class="collection__excerpt">
 										<?php $content = get_the_content();
-										 echo '<p>' .  wp_trim_words( $content, 80, '...' ) . '</p>'; 
+										 echo '<p>' .  wp_trim_words( $content, 60, '...' ) . '</p>'; 
 										?>
-										<a href="<?php the_permalink() ?>">See more</a>
 										</div>
+										<a href="<?php the_permalink() ?>">See more</a>
+								</div>
 							</div>
-						</div>
 					<?php endwhile;?>		
 			</div> 
 

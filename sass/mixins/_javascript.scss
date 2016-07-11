@@ -1,0 +1,9 @@
+.js-expand-content-target {
+	display: block;
+}
+
+.js-expand-content-target.hidden {
+	max-height: 0;
+	display: none;
+	opacity: 0;
+}

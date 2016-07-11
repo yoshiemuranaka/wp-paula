@@ -24,21 +24,8 @@ get_header(); ?>
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 					</header><!-- .entry-header -->
 				</div>
-				
-				<!-- entry content -->
-				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-				
-				<!-- french translation -->
-				<?php if(get_field('french_translation')): ?>
-				<article>
-					<a class="js-expand-content link--translate">See French Translation</a>
-					<div class="entry-content translated">
-						<?php
-							echo get_field('french_translation')
-						?>
-					</div>
-				</article>
-				<?php endif; ?>
+
+				<!-- gallery -->
 				<?php 
 					$gallery = get_field('collection_gallery');
 					if($gallery):
@@ -46,16 +33,31 @@ get_header(); ?>
 				<div class="row collection__gallery">
 					<?php foreach($gallery as $image): ?>
 						<div class="col four">
-							<a rel="gallery" href="<?php echo $image['url']?>" class="swipebox">
+							<a href="<?php echo $image['url']?>" rel="collection" class="swipebox">
 								<div class="image--thumbnail" style="background-image:url(<?php echo $image['url']?>)"></div>
 							</a>
 						</div>
 					<?php endforeach; ?>
 				</div>
-			<?php 
-				endif;
-			endwhile; 
-			?>
+				<?php endif; ?>
+
+				<!-- entry content -->
+				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+				
+				<!-- french translation -->
+				<?php if(get_field('french_translation')): ?>
+				<article data-expand-content>
+					<a class="js-expand-content-trigger show-translation">See French Translation</a>
+					<div class="js-expand-content-target entry-content hidden">
+					<hr>
+						<?php
+							echo get_field('french_translation')
+						?>
+					</div>
+				</article>
+				<?php endif; ?>
+				
+			<?php endwhile; ?>
 			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -50,6 +50,7 @@ a.logo {
 
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
 
   align-items: center;
   justify-content: center;
@@ -79,6 +80,8 @@ a.logo {
 }
 
 .collection__title {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
   a {
     text-decoration: none;
   }
