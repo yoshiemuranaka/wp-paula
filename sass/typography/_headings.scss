@@ -31,10 +31,16 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-branding {
 	display: inline-block;
+  width: 100%;
+  text-align: center;
 	h1 {
 		margin: 0;
 		line-height: 80px;
 	}
+  @include mq(medium) {
+    width: auto;
+    text-align: left;
+  }
 }
 a.logo {
 	text-decoration: none;
@@ -43,10 +49,11 @@ a.logo {
 .hero {
   display: flex;
   position: relative;
-  height: 350px;
+  height: auto;
+  min-height: 300px;
   width: 100%;
   margin-bottom: 50px;
-  padding: 0 10%;
+  padding: 75px 10%;
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,6 +61,12 @@ a.logo {
 
   align-items: center;
   justify-content: center;
+
+  @include mq(medium) {
+    height: 350px;
+    padding: 0 10%;
+  }
+
   .overlay {
     position: absolute;
     top: 0;

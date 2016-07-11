@@ -1,74 +1,50 @@
 .main-navigation {
 	clear: both;
 	display: inline-block;
-	float: right;
-	// width: 100%;
+	float: none;
+	width: 100%;
+	text-align: center;
 
 	ul {
-		display: none;
 		list-style: none;
-		margin: 0;
+		margin: 0 0 30px;
 		padding-left: 0;
-
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul,
-				&.focus > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}
-		}
-
-		li:hover > ul,
-		li.focus > ul {
-			left: auto;
+		@include mq(medium) {
+			margin: 0;
 		}
 	}
 	
 	li {
-		float: left;
 		position: relative;
-		padding-right: 50px;
+		padding: 0;
+		display: block;
+		margin-bottom: 1.5em;
 		&:last-child {
 			padding: 0;
 		}
-
-		&:hover > a,
-		&.focus > a {
+		@include mq(medium) {
+			padding-right: 50px;
+			margin: 0;
+			display: inline-block;
 		}
 	}
 	
 	a {
 		display: block;
 		text-decoration: none;
-		line-height: 80px;
+		line-height: 1em;
 		text-transform: uppercase;
-		letter-spacing: 0.05em;
+		letter-spacing: 0.15em;
 		font-weight: 100;
+		@include mq(medium) {
+			line-height: 80px;
+		}
+	}
+
+	@include mq(medium) {
+		float: right;
+		width: auto;
+		text-align: left;
 	}
 
 	.current_page_item > a,
@@ -76,20 +52,5 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 		// border-bottom: 3px solid grey;
-	}
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@include mq(medium) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
 	}
 }
