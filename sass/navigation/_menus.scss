@@ -27,8 +27,7 @@
 			margin: 0;
 			display: inline-block;
 		}
-	}
-	
+	}	
 	a {
 		display: block;
 		text-decoration: none;
@@ -37,8 +36,23 @@
 		letter-spacing: 0.15em;
 		font-weight: 100;
 		@include mq(medium) {
-			line-height: 80px;
+			line-height: 75px;
 		}
+		&:hover {
+			&::after {
+				width: 100%;
+				background-color: #c1c1c1;
+			}
+		}
+	}
+	a::after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 5px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
 	}
 
 	@include mq(medium) {
@@ -51,6 +65,9 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		// border-bottom: 3px solid grey;
+		&::after {
+			width: 100%;
+			background-color: #c1c1c1;
+		}
 	}
 }
