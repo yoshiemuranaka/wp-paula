@@ -21,7 +21,7 @@ get_header(); ?>
 				<div class="hero" style="background-image: url(<?php echo $img_url ?>)">
 					<div class="overlay"></div>
 					<header class="entry-header">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<?php the_title( '<h1>', '</h1>' ); ?>
 					</header><!-- .entry-header -->
 				</div>
 

@@ -15,7 +15,9 @@ get_header(); ?>
 				<?php
 				while ( have_posts() ) : the_post();?>
 					<header class="entry-header">
-						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						<?php the_title( '<h2 class="entry-title">', '</h2>' ); ?>
+							<h5 class="writing__date"><?php the_date(); ?></h5>
+
 					</header><!-- .entry-header -->
 
 					<?php get_template_part( 'template-parts/content', get_post_format() );

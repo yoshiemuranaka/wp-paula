@@ -1,3 +1,10 @@
+.site-header {
+	height: auto;
+	@include mq(medium) {
+		height: 80px;
+	}
+}
+
 .main-navigation {
 	clear: both;
 	display: inline-block;
@@ -23,13 +30,13 @@
 			padding: 0;
 		}
 		@include mq(medium) {
-			padding-right: 50px;
+			padding-right: 30px;
 			margin: 0;
 			display: inline-block;
 		}
 	}	
 	a {
-		display: block;
+		display: inline-block;
 		text-decoration: none;
 		line-height: 1em;
 		text-transform: uppercase;
@@ -56,9 +63,10 @@
 	}
 
 	@include mq(medium) {
-		float: right;
+		position: absolute;
+		right: 15px;
 		width: auto;
-		text-align: left;
+		text-align: right;
 	}
 
 	.current_page_item > a,
