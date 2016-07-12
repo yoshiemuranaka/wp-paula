@@ -14,11 +14,6 @@ h1, h2, h3, h4, h5, h6 {
 	margin-top: 50px;
 }
 
-.section-title,
-.entry-title {
-  text-align: center;
-}
-
 .section-title {
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -110,4 +105,18 @@ a.logo {
 .writing__date {
   margin: 0;
   font-weight: 400;
+}
+
+.entry-content .exhibition-group,
+.entry-content .experience-group {
+  h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 0;
+  }
+  p {
+    margin: 0;
+    font-size: 1em;
+  }
+  margin-bottom: 50px;
 }

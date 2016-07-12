@@ -27,8 +27,10 @@ get_header(); ?>
 							$end = get_sub_field('end_year');
 							if($end == ''):$end = 'current';endif;
 						?>
-					    <h3><?php echo $title ?><em><?php echo $start ?>-<?php echo $end ?></em></h3>
-					    <p><?php echo $company ?></p>
+							<div class="experience-group">
+						    <h3><?php echo $title ?> <span class="meta--date"><?php echo $start ?>-<?php echo $end ?></span></h3>
+						    <p><?php echo $company ?></p>
+					    </div>
 				<?php	endwhile;
 					endif;
 				 ?>
@@ -40,9 +42,16 @@ get_header(); ?>
 				</header>
 				<?php 
 					if( have_rows('exhibitions') ):
-					  while ( have_rows('exhibitions') ) : the_row(); ?>
-					    <h3><?php echo the_sub_field('venue_name'); ?></h3>
-					    <p></p>
+					  while ( have_rows('exhibitions') ) : the_row(); 
+						$venue = get_sub_field('venue_name');
+						$location = get_sub_field('city_state');
+						$year = get_sub_field('year');
+						$name = get_sub_field('exhibit_name');
+					?>
+							<div class="exhibition-group">
+						    <h3><?php echo $venue; ?> <span class="meta--location-year"><?php echo $location ?>, <?php echo $year ?></span></h3>
+						    <p><?php echo $name; ?></p>
+					    </div>
 				<?php	endwhile;
 					endif;
 				 ?>
