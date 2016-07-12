@@ -23,9 +23,23 @@ object {
 ## Images
 --------------------------------------------------------------*/
 
+.photograph__gallery,
+.painting__gallery,
 .collection__gallery {
 	max-width: 1000px;
 	margin: 0 auto;
+	.col {
+		box-sizing: border-box;
+		padding: 0;
+		margin-bottom: 15px;
+		@include mq(medium) {
+			padding-right: 15px;
+			&:nth-child(3) {
+				padding: 0;
+			}
+		}
+
+	}
 }
 
 .image--thumbnail {
@@ -33,7 +47,10 @@ object {
 	height: 300px;
 	background-size: cover;
 	background-position: center center;
-	margin: 0 auto;	
+	margin: 0 auto;
+	@include mq(medium) {
+		width: 100%;
+	}	
 	// @include aspect-ratio(1,1);
 
 }

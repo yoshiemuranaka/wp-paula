@@ -36,11 +36,13 @@ get_header(); ?>
 					$photographs = get_field('photographs');
 					if($photographs):
 					?>
-				<div class="row painting__gallery" data-gallery="photographs" data-expand-gallery>
+				<div class="row photograph__gallery" data-gallery="photographs" data-expand-gallery>
 					<?php foreach($photographs as $photograph): ?>
 							<div class="col four">
 								<a href="<?php echo $photograph['url']?>" rel="gallery-photographs" class="swipebox">
-									<div class="image--thumbnail" style="background-image:url(<?php echo $photograph['url']?>)"></div>
+									<div class="image--thumbnail__wrapper">
+										<div class="image--thumbnail" style="background-image:url(<?php echo $photograph['url']?>)"></div>
+									</div>
 								</a>
 							</div>
 					<?php endforeach; ?>
