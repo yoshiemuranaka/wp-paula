@@ -25,7 +25,7 @@ get_header(); ?>
 								<div class="col eight collection__content">	
 										<h2 class="collection__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 										<div class="collection__excerpt">
-										<?php $content = get_the_content();
+										<?php $content = strip_shortcodes(get_the_content());
 										 echo '<p>' .  wp_trim_words( $content, 60, '...' ) . '</p>'; 
 										?>
 										</div>

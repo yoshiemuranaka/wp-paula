@@ -2,3 +2,20 @@
 	max-width: 750px;
 	margin: 0 auto;
 }
+
+.type-post {
+	img {
+		display: block;
+		margin: 15px auto;
+	}
+	figure {
+		display: block;
+		margin: 0 auto;
+	}
+	.wp-caption-text {
+		color: $color__text-main;
+		font-weight: 100;
+		font-size: 0.9em;
+		letter-spacing: 0.1em;
+	}
+}

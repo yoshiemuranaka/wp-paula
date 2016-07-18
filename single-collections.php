@@ -25,22 +25,6 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 				</div>
 
-				<!-- gallery -->
-				<?php 
-					$gallery = get_field('collection_gallery');
-					if($gallery):
-					?>
-				<div class="row collection__gallery">
-					<?php foreach($gallery as $image): ?>
-						<div class="col four">
-							<a href="<?php echo $image['url']?>" rel="collection" class="swipebox">
-								<div class="image--thumbnail" style="background-image:url(<?php echo $image['url']?>)"></div>
-							</a>
-						</div>
-					<?php endforeach; ?>
-				</div>
-				<?php endif; ?>
-
 				<!-- entry content -->
 				<?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 				
@@ -55,6 +39,22 @@ get_header(); ?>
 						?>
 					</div>
 				</article>
+				<?php endif; ?>
+
+				<!-- gallery -->
+				<?php 
+					$gallery = get_field('collection_gallery');
+					if($gallery):
+					?>
+				<div class="row collection__gallery">
+					<?php foreach($gallery as $image): ?>
+						<div class="col four">
+							<a href="<?php echo $image['url']?>" rel="collection" class="swipebox">
+								<div class="image--thumbnail" style="background-image:url(<?php echo $image['url']?>)"></div>
+							</a>
+						</div>
+					<?php endforeach; ?>
+				</div>
 				<?php endif; ?>
 				
 			<?php endwhile; ?>

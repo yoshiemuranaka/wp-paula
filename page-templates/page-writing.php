@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Writing 
+Template Name: Journal 
 */
 
 get_header(); ?>
@@ -19,7 +19,7 @@ get_header(); ?>
 						<div class="writing__excerpt">
 							<h2 class="writing__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<h5 class="writing__date"><?php the_date(); ?></h5>
-							<?php $content = get_the_content();
+							<?php $content = strip_shortcodes(get_the_content());
 							 echo '<p>' .  wp_trim_words( $content, 50, '...' ) . '</p>'; 
 							?>
 							<a href="<?php the_permalink() ?>">Read more</a>

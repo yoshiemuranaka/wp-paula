@@ -60,3 +60,27 @@ object {
 	// @include aspect-ratio(1,1);
 }
 
+/*--------------------------------------------------------------
+## Videos
+--------------------------------------------------------------*/
+
+.wp-playlist {
+	border: none !important;
+	padding: 0 !important;
+	margin: 25px 0 !important;
+	.wp-playlist-tracks {
+		display: none;
+	}
+	.mejs-container, .mejs-container .mejs-controls, .mejs-embed, .mejs-embed body {
+		background-color: rgba(0,0,0,0.3) !important;
+	}
+	.mejs-container .mejs-controls .mejs-time {
+		// color: $color__text-main !important;
+	}
+	.mejs-controls .mejs-time-rail .mejs-time-current {
+		background: rgba(0,0,0,0.5) !important;
+	}
+	.mejs-controls .mejs-time-rail .mejs-time-loaded {
+		background: transparent !important;
+	}
+}
