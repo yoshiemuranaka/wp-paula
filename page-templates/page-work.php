@@ -8,14 +8,16 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="content-wrapper">
+			
+	<?php 
+			$paintings = get_field('paintings');
+			if($paintings):
+			?>
 			<div class="posts__container">
 			<header>
 				<h2 class="section-title">Paintings</h2>
 			</header>
-			<?php 
-					$paintings = get_field('paintings');
-					if($paintings):
-					?>
+		
 				<div class="row painting__gallery">
 						<?php foreach($paintings as $painting): ?>
 							<div class="col four">
@@ -25,17 +27,19 @@ get_header(); ?>
 							</div>
 					<?php endforeach; ?>
 				</div>
-			<?php endif;?>
 			</div>
+		<?php endif;?>
+
 			
+	<?php 
+			$photographs = get_field('photographs');
+			if($photographs):
+			?>	
 		<div class="posts__container">
 			<header>
 				<h2 class="section-title">Photographs</h2>
 			</header>
-			<?php 
-					$photographs = get_field('photographs');
-					if($photographs):
-					?>
+		
 				<div class="row photograph__gallery" data-gallery="photographs" data-expand-gallery>
 					<?php foreach($photographs as $photograph): ?>
 							<div class="col four">
@@ -47,8 +51,31 @@ get_header(); ?>
 							</div>
 					<?php endforeach; ?>
 				</div>
-			<?php endif;?>
 		</div>
+		<?php endif;?>
+
+			<?php 
+			$drawings = get_field('drawings');
+			if($drawings):
+			?>	
+		<div class="posts__container">
+			<header>
+				<h2 class="section-title">Drawings</h2>
+			</header>
+		
+				<div class="row photograph__gallery" data-gallery="drawings" data-expand-gallery>
+					<?php foreach($drawings as $drawing): ?>
+							<div class="col four">
+								<a href="<?php echo $drawing['url']?>" rel="gallery-drawings" class="swipebox">
+									<div class="image--thumbnail__wrapper">
+										<div class="image--thumbnail" style="background-image:url(<?php echo $drawing['url']?>)"></div>
+									</div>
+								</a>
+							</div>
+					<?php endforeach; ?>
+				</div>
+		</div>
+		<?php endif;?>
 
 
 			</div>

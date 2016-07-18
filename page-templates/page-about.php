@@ -9,10 +9,32 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="content-wrapper">
 			<?php
-			// while ( have_posts() ) : the_post();
-			// 	get_template_part( 'template-parts/content', 'page' );
-			// endwhile; // End of the loop.
+			while ( have_posts() ) : the_post();
+				get_template_part( 'template-parts/content', 'page' );
+			endwhile; // End of the loop.
 			?>
+
+			<?php 
+			if( have_rows('education') ): ?>
+			<div class="entry-content">
+				<header>
+					<h2 class="section-title">Education</h2>
+				</header>
+
+				<?php
+				while ( have_rows('education') ) : the_row(); 
+				$school = get_sub_field('school_name');
+				$degree = get_sub_field('degree');
+				$year = get_sub_field('completion_year');
+				?>
+				<div class="education-group">
+					<h3><?php echo $school?> </h3>
+					<p><?php echo $degree ?> <span class="meta--date"><?php echo $year ?></span></p>
+				</div>
+			<?php	endwhile;?>
+		</div>
+	<?php endif; ?>
+
 
 			<div class="entry-content">
 				<header>

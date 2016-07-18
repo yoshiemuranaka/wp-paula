@@ -104,6 +104,7 @@ a.logo {
 .writing__title {
   text-transform: uppercase;
   letter-spacing: 0.15em;
+  margin-bottom: 0;
   a {
     text-decoration: none;
   }
@@ -113,6 +114,7 @@ a.logo {
   font-weight: 400;
 }
 
+.entry-content .education-group,
 .entry-content .exhibition-group,
 .entry-content .experience-group {
   h3 {
@@ -123,6 +125,7 @@ a.logo {
   p {
     margin: 0;
     font-size: 1em;
+    text-transform: capitalize;
   }
   margin-bottom: 50px;
 }

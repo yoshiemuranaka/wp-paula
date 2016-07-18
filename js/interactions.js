@@ -14,9 +14,16 @@ Interactions.expandContent = {
 	}
 }
 
+Interactions.pageLoad = {
+	init: function() {
+		jQuery('#content').addClass('loaded');
+	}
+}
+
 jQuery(document).ready(function($){
 	$('.swipebox').swipebox();
 	Interactions.expandContent.init();
+	Interactions.pageLoad.init();
 });
 
 
