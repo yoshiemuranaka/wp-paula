@@ -14,6 +14,17 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+			<?php if(get_field('contact')) : ?>
+				<div class="entry-content">
+					<header>
+						<h2 class="section-title">Contact</h2>
+					</header>
+					<div class="contact-group">
+						<h3><?php echo get_field('contact'); ?></h3>
+					</div>
+				</div>
+			<?php endif; ?>
+
 			<?php 
 			if( have_rows('education') ): ?>
 			<div class="entry-content">

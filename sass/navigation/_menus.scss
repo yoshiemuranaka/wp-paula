@@ -69,13 +69,13 @@
 		text-align: right;
 	}
 
-	.current_page_item > a,
-	.current-menu-item > a,
-	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
-		&::after {
-			width: 100%;
-			background-color: $color__text-main;
-		}
-	}
+	// .current_page_item > a,
+	// .current-menu-item > a,
+	// .current_page_ancestor > a,
+	// .current-menu-ancestor > a {
+	// 	&::after {
+	// 		width: 100%;
+	// 		background-color: $color__text-main;
+	// 	}
+	// }
 }

@@ -19,7 +19,9 @@ get_header(); ?>
 						<div class="row">
 								<div class="col four">
 									<div class="collection__img">
-										<img class="image--thumbnail" src="<?php echo get_field('hero_image'); ?>">
+									<?php $img_url = get_field('hero_image'); ?>
+										<div class="image--thumbnail" style="background-image: url(<?php echo $img_url ?>)">
+										</div>
 									</div>
 								</div>
 								<div class="col eight collection__content">	
